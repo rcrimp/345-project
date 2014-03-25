@@ -17,3 +17,14 @@ Wednesday 2014-03-26 10:00
 - project todo list
 - gantt, pert charts, milestones etc...
 - designate tasks to everyone
+
+choosing roles
+Richie - Editor
+Tom - co-toolsmith Tester
+Shaun - copilots
+Reuben - copilots
+Chris - toolsmith
+
+
+
+
