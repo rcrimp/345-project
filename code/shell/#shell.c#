@@ -6,7 +6,7 @@ int main() {
 
   for(;;){
      /*scanf("%79s", string);*/
-    system("ls -la");
+   ("ls -la");
   }
   return 0;
 }

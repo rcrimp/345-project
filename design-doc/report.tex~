@@ -1,0 +1,269 @@
+THE FAMOUS FIVE
+Project Proposal
+Prepared for: Andrew Trotman, Lecturer
+Prepared by: The Famous Five
+26 March 2014
+Proposal Name: Five Make a Unicorn Shell
+THE FAMOUS FIVE
+EXECUTIVE OVERVIEW
+
+The Unicorn Shell (working title) will be a cross platform POSIX style shell which will be released with linux, OSX and Windows.
+
+The Unicorn Shell will be targeted at those of beginner level, people who are not particularly skilled at using a shell, and possibly even those who have never used one before, while still maintaining all the functions and uses that those more adept with shells would appreciate.
+
+There will be new “noob-friendly" features that will be focused on usability. Basic shell operations will be natural interactions, anyone will be able to pickup unicorn very quickly, even those from differing OS backgrounds.
+
+Despite the target audience of our Shell, it will still provide the full feature set that advanced users would expect out of a modern POSIX style shell.
+
+Such features will include advanced tab-completion, stream redirection, fine grained multi process control, several predefined macros and aliases for things like accessing the command history. And almost everything will be able to be customised.
+
+It will also look pretty with proportional width font. 
+
+THE FAMOUS FIVE
+INTRODUCTION
+
+Thank you for choosing to read our project proposal
+We are “The Famous Five” and we are extremely excited to show you our proposal. When set with the task of designing and creating a new shell we had a number of ideas that
+sprang to mind and a great deal more that became more apparent to us as we researched shells in greater detail and found things that we felt a shell would benefit from having.
+
+THE FAMOUS FIVE
+PROJECT DESCRIPTION
+
+We want a shell that maintains all the features of the Bourne Again Shell that make it such a popular choice amongst shell users. However we will attempt to add features that make it faster to use and also include additional features that make our shell standout, make it worth talking about and make it a shell that people would seriously consider switching to using.
+
+These additional features shall include
+
+NOOB FEATURES
+
+Our shell will provide several intuitive ways to interact with the mouse, these interactions will be very similar to the actions in a standard GUI OS environment (i.e. double click for open).
+However, most of our actions wont actually perform the action outright, instead it will paste the command that would perform the requested action into the current prompt, i.e. clicking "open file" in a GNOME environment will paste the command "gnome-open <file-name>"
+into the prompt, the user will then have to press "return" to execute the command. The purpose of this is to both help the user when they do not know the exact text command, and then teach the user that text command.
+
+Fig 1: graphical ls, and context menu 
+Our shell will come with an inbuilt 'ls' function, designed for specifically to aid beginners (the default OS ls/dir will be able to exist alongside or even replace our inbuilt function) 1: file-names will be preceded by a filetype icon, like a GUI shell (fig.1) 2: Intuitive directory navigation.
+
+Single clicking on some directory "x/" will paste the command "cd x/" into the prompt. Double clicking on some directory "x/" will execute the command "cd x/"Right clicking on some directory "x/" will open a context menu (see fig.1), which will list basic directory commands e.g "open (cd)" will execute the command "cd x/" "move to .. (mv), will paste the command "mv x/ " into the prompt, allowing the user to type in a new name for the file.
+etc...
+Fig 2: interactive command history
+
+3: Intuitive file interaction
+Single clicking on some file will paste the filename into the current prompt, i.e if I were to type "emacs" into my prompt, and then click "textfile.txt", this will result in having "emacs result.txt" left in my prompt. Double clicking on some file will open the file with the OS default application. e.g if I were in a GNU/linux environment, and pdf files were associated with evince, double clicking on "document.pdf" will open the pdf file in evince.
+
+Right clicking a file will open a context menu (see fig.1), which will list basic file operations e.g "GUI open (open)" will perform the same operation as double clicking the file.
+"Rename To .. (mv)" will paste the string "mv <filename> ", then allowing the user to choose a new name" 
+
+"Move to Trash" will perform the command "mv <filename> ./Trash/" or something similar" etc...
+
+4: Interactive viewing of the command history
+clicking the small arrow to the left of the prompt, will open a drop down menu (upwards), showing the last commands executed in ascending/descending? order (i.e last on bottom). The standard bash style keyboard shortcuts to access your history will also exist for the
+more advanced user. (up, down, "", str" etc...)
+
+5. Hashtags
+
+We will allow users to set temporary (and permanent) directory flags with a quick command.
+Usage:
+
+executing "#work" will set a flag in the current directory called "work", and successive execution of the command "#work" will change the users directory back to the first directory
+in which it was called. allowing for quick navigation between directories when working on a project. These check-points are not stored be default when the shell is closed, but there will be an option to save these "hashtags" so that they persist over separate sessions.
+
+ADVANCED FEATURES
+The various forms of “Tab completion”
+tab completion will index: (--decide on an order of precedence--)
+•	 $PATH
+•	 Path-name completion in the working directory.
+•	 File-name completion in the working directory.	 •	 Path-name completion of all the parent directories of the working directory.
+•	 Variable-name completion
+•	 Man-page completion
+•	 Command history
+wild card *
+Tab-Tab lists all possibilities once for each completion, subsequent tabbing will cycle the
+prompt through the possibilities.
+inline prediction, like googles live search
+Fig. 3: Flow of Information
+
+RESOURCE REQUIREMENTS
+
+ORGANISATION
+
+TEAM SUMMARY
+
+Reuben Crimp (Surgeon):
+Reuben began programming in secondary school where he mainly made simple games and simple websites. He did well in mathematics but less so in English. He enrolled at Otago University in mid 2012, majoring in computer science, with a minor in mathematics. He has no industry experience but a strong passion for the subject matter.
+
+Shaun Wratten (Co-pilot):
+Shaun recently graduated from UCOL in Palmerston North with a Bachelor’s degree in Information and Communications Technology, in which he learnt a decent portion of his skill set. This includes programming in C#, C++, scripting and web design using PHP and Javascript, and working with MS-SQL and MySQL database. One of the major things he learnt while studying was how to strutter a team project and hot to be as successful leader and team member.
+
+Chris McMillan (Toolsmith):
+Chris has studied at the University of Otago since 2010, but only became interest in computers after high school. He completed a chemistry degree and then decided that his passion lay in computers and began study towards a computer science major as well. He will finish his BSc double major at the end of 2014. His main strengths are music and audiosoftware. Chris can confidently write Java and Python programs, but building a shell in C++
+will be a challenge for him that he looks forward to and hopes to learn a lot from.
+
+Thomas Hall (Tester):
+Thomas is a recent graduate with BSc in Physics. He is currently studying a DipGrad in computer science to be finished in early 2015. He has experience programming in C# from experimenting with Unity, and Matlab as part of his physics education. He also has a vast knowledge of Java and Python from the 100 level COMP courses.
+
+Richie McKee (Editor and Program Clerk):
+Richie completed his LLB/BA at the end of 2012 at Otago University. He always had a strong desire to learn computer science but is only now taking steps towards doing so. He began his DipGrad at the start of 2014 and hopes to be completed by the end of the year. As such his current level of experience is limited and his experience with programming is limited to what he learnt during Summer School and what he is currently covering throughout the semester. To him the project is a daunting but exciting prospect that he hopes to learn from.
+
+PROJECT BREAKDOWN
+
+Identifiable acitviities, milesstones, deliverables.
+
+RISK ANALYSIS
+
+We wanted to implement a proactive approach to dealing with risks as opposed to a reactive approach. This meant that we began thinking about risks even before technical
+work is initiated. Our objective was to be able to avoid risk whenever possible, and to solve problems before they manifested themselves. This preparation would hopefully mean that we could respond to problems that did occur in a controlled and effective manner. We understand that risks evolve throughout the course of the project and so we will be constantly monitoring identified risks throughout the course of the year via a risk map to ensure that we are still keeping them at bay. Also, as we begin new work, or decide to implement new ideas, we will continue to look at the possibility of new risks to our project. 
+GENERIC RISKS
+
+Loss of a Team Member: The consequences of losing a team member are fairly straightforward. We would lose 20% of our workforce if this occurs. However the effect of losing a person would be vastly different depending on who was lost. For example, losing
+Reuben or Shaun would place an extremely heavy burden on whichever one of those two remained in the team, since they are the two members with the most coding experience and as such they will share the biggest portion of the coding workload. Losing Reuben would place an almost impossible amount of pressure on Shaun and would no doubt require Chris or Thomas to step into a larger coding role which will undoubtedly place great stress on the team as a whole. As it stands there are no foreseen reasons as to why our team would lose a member. Everyone plans on completing the course. However Richie does still occasionally job hunt and there is the risk that if he managed to secure himself a job, he would end his studies togo and work. Richie has taken on the role of editor and program clerk. It is a role that could be split between Thomas and Chris in the event of his leaving.
+
+PROJECT RISKS
+
+Overriding Other People’s Work: We will have multiple people working on the same code and obviously this runs the very real risk that people will make changes to someones code and then save it and the previous code will be lost. To help eliminate this risk from occurring we will use a configuration management tool effectively. Our team chose GIT as a distributed depository where we would upload and share our code with each other. Loss of Code: - GIT to alleviate,. distributed repository.  Lack of Exposure to and/or Experience with the Required Technologies: Due to the vastness of this project and the requirements that the shell work across a number of platforms, our group is required to have a fairly extensive knowledge on a number of technologies, languages and programs. We have accepted that we don’t know it all, and as such, a significant portion of our time will require us to familiarise ourselves with certain languages, programs, platforms etc. The time we spend doing this will cost us time that we could be spending doing the coding and testing of our shell. However eliminating this risk is essential if we hope to end up with a fully working shell. So we must take the time to ensure we can use the necessary tools. We can cut down on the time lost to this risk by assigning certain people to learn and be familiar (become the team expert) of different technologies/ languages and programs. So, while one person becomes the expert of a certain tool we need to use, someone else can become the expert of a certain programming language, while the remaining members of the team can focus on working with the aspects that we already have a working understanding of. Being Overwhelmed by Workloads from Other Classes: This is a very real risk since all members of the team are taking a minimum of four papers per semester. This is a full year project with a final due date at the end of the year whereas other papers have much shorter time frames for their assignments and can appear as a more immediate threat to our grades if we do not complete them on time. As such the risk is that we prioritise other papers at the expense of this one. “We can sort that out next week after we finish our Artificial Intelligence lab reports” is a classic example of this risk already having come to fruition. Yet all is not lost. We have developed a project management plan that will help us realise the importance of not adopting this aforementioned mind set. We may have a full year, but that is because we need a year. Having a project management plan with scheduled tasks will help us to understand that we can’t afford to put this project at the bottom of our list of things to do. None of us have ever undertaken such an immense task before when it comes to computer science and as such we may not fully appreciate just how much work will go into this project. We have nothing to go on. Hence a need to err on the side of caution and stay on task, especially since our lack of previous experience with such a large task could also leave us upon to the risk of unforeseen tasks. 
+
+Difficulty integrating work
+
+PRODUCT RISKS
+
+BUSINESS RISKS
+
+PROJECT SCHEDULE
+
+Dependencies between activities - allocation of people to tasks, time until milestones
+
+Monitoring the project and ourselves is an important way for us to anticipate future
+problems and gives us a chance to avoid them.
+Sticking to the Gant Chart, Pert Chart - make sure on schedule
+reporting - GIT hub - so every time we make a build we push it.
+
+((How it will be monitored and when will reports be delivered))
+
+CONCLUSION
+
+
+TOOLS/HARDWARE
+
+Version Control:
+Use Git as distributed revision control, with github for project hosting.
+
+Windows:
+IDE/compiler: Visual Studio 2013 Professional
+lang: standard c++ libraries and standard windows libraries included with VS’13.
+GUI: ??
+
+OSX:
+IDE/compiler: Xcode
+lang: standard C++ libraries
+GUI: Cocoa graphics, in Objective C
+
+Linux:
+compiler: gcc/g++
+lang: standard C++ libraries
+GUI: X11
+OS versions: 64bit - Fedora, ubuntu, Mint....
+The GUI for each platform will be designed separately, to target each platform
+independently.
+
+DESIGN OF THE APP
+
+Mock-Ups:
+-insert words here-
+
+Features:
+Windows, Linux, OSX platforms
+Pipes and redirects | < >
+Support proportional spaced fonts for the CLI
+Highlight text, cut, copy, paste
+Mouse interaction
+Syntax highlighting, (gre, grep)
+
+all these bash shortcutsall these bash commands
+
+support aliases (user defined command shortcuts)
+resizable window
+Associate *.sh files with our shell
+Optional Features:
+
+A function called “woman”, which is like “man”, but clear and concise (noob friendly)
+cd into wd.
+i.e.
+/home/uname/Documents/coursework/345/project/spec/
+cd Documents
+/home/uname/Documents/
+
+same line Tab completion i.e like zsh
+Utilizes regular expressions
+Tab Tab, to list all possible completions
+
+
+Process control
+Different operating systems by convention define a new line within a file differently
+We will allow the user to choose how to handle cross platform files
+Fix:	
+
+edit as current OS, save as current OS (Forced when parsing a script)
+Compatibility: 	
+edit as current OS, save as original.
+Do nothing: 	 edit as original save as original.
+Custom: 	
+Fix; but you can specify the replacement terminator {‘\r’, ‘\n’, ‘\r\n’, ‘\n\r’}
+
+Script syntax and semantics definition
+like python, but with braces? i.e. fuck the strict use of whitespace.
+like Bash, but more strict, like C? i.e. fuck the vague million+ ways to do things
+
+SYNTAX AND SEMANTICS FEATURES :
+
+Keywords
+and break class else
+end fail false for
+function global if in
+not or print return
+TRUE try unicorn while
+
+We will use end statements and colons to delimit program blocks.
+
+Arithmetic operators:
+
++ Addition
+- Subtraction
+* Multiplication
+/ Division
+% Modulus
+^ Exponent
+
+
+Comparison Operators:
+
+== Equal?
+= Not equal?
+> Left larger?
+< Right Larger?
+>= Left larger than or equal to?
+<= Right larger than or equal to?
+
+Assignment operators:
+
+= Simple assignment.
++= Add and assignment.
+-= Subtract and assignment.
+
+foo function in C:
+
+void foo(int x) {
+  if (x == 0) {
+    bar();
+    baz();	 } else { 	 	 quz(x);
+    foo(x - 1);
+  }
+}
+
+foo function in unicorn:
+
+function foo(x):
+if x == 0:
+bar();
+baz();
+else: 	 	 qux(x);
+foo(x - 1);
+end
+end
