@@ -1,6 +1,12 @@
+
+%fix the state diagram
+%finish tab completion section
+
+%write a paragraph on the scripting langauage
+%make gantt chart
 \documentclass[a4paper,11pt]{article}
-\title{COSC345 Project Proposal}
-\author{Richie, Shaun, Chris, Tom, Reuben}
+\title{Project Proposal}
+\author{Richie, Chris, Tom, Shaun, Reuben}
 \date{\today}
 \addtolength{\oddsidemargin}{-.5in}
 \addtolength{\evensidemargin}{-.5in}
@@ -18,14 +24,13 @@
 \begin{document}
 \maketitle
 
-%THE FAMOUS FIVE
 %\\*Project Proposal
 %\\*Prepared for: Andrew Trotman, Lecturer
 %\\*Prepared by: The Famous Five
-%\\*26 March 2014
+%\\*4 April 2014
 %\\*Proposal Name: Five Make a Unicorn Shell
-%\\*THE FAMOUS FIVE
-\section{Overview}
+
+\section{Executive Overview}
 
 The Unicorn Shell (working title) will be a modern, POSIX style shell which will be released on linux, OSX and Windows under the FreeBSD License. The project will written almost entirely in C++ and al the source code will be released in it's entirety.
 
@@ -35,7 +40,7 @@ The shell will be developed to be intuitive. Basic shell operations will be natu
 
 Despite the target audience of our Shell, it will still provide the full feature set that advanced users would expect.
 
-Such features will include tab-completion, inline command prediction and detection, stream redirection, fine grained multi process control, several predefined macros and aliases for things like accessing the command history. And almost everything will be able to be customised.
+Such features will include tab-completion, inline command prediction and detection, stream redirection, job control,  command history and aliases. And almost everything will be able to be customised.
 
 It will also look pretty with proportional width font, no more ugly monospaced grabage, only the most beautfilly kerned Helvetica. 
 
@@ -60,70 +65,77 @@ Thomas is a recent graduate with BSc in Physics. He is currently studying a DipG
 
 \subsection*{Richie McKee (Editor and Program Clerk):}
 Richie completed his LLB/BA at the end of 2012 at Otago University. He always had a strong desire to learn computer science but is only now taking steps towards doing so. He began his DipGrad at the start of 2014 and hopes to be completed by the end of the year. As such his current level of experience is limited and his experience with programming is limited to what he learnt during Summer School and what he is currently covering throughout the semester. To him the project is a daunting but exciting prospect that he hopes to learn from.
-\pagebreak
-\section{Project Description}
 
-We want a shell that has all the features of popular shells like the Bourne Again Shell. However we will attempt to add features that make it far more usable and also include additional features that make our shell standout, encouraging people to adopt our obviously superior piece of software.
+\pagebreak
+%\section{Project Description}
+
+%We want a shell that has all the features of popular shells like the Bourne Again Shell. However we will attempt to add features that make it far more usable and also include additional features that make our shell standout, encouraging people to adopt our obviously superior piece of software.
 
 \section{Tools and Hardware}
 
-\subsection*{Windows:}
-IDE/compiler: Visual Studio 2013 Professional
-lang: standard c++ libraries and standard windows libraries included with VS’13.
-GUI: WIN32
+\begin{multicols}{3}
 
-\subsection*{OSX:}
-IDE/compiler: Xcode
-lang: standard C++ libraries
-GUI: Cocoa graphics, in Objective C
+\subsection*{Windows}
+\begin{tabular}{l l}
+  IDE & Visual Studio 2013 \\
+  libs & C++ libraries \\
+  GUI & WIN32 \\
+\end{tabular}
 
-\subsection*{Linux:}
-compiler: g++
-lang: standard C++ libraries
-GUI: X11
+\subsection*{OSX}
+\begin{tabular}{l l}
+IDE & Xcode \\
+libs & C++ libraries \\
+GUI & Cocoa graphics \\
+\end{tabular}
 
-We will use git for our distributed revision control, with project hosting by the generous people at github.
+\subsection*{Linux}
+\begin{tabular}{l l}
+  compiler &  g++ \\
+  libs & C++ libraries \\
+  GUI & X11 \\
+\end{tabular}
+
+\end{multicols}
+
+\subsection*{Revision Control}
+We will use git for our distributed revision control, with project hosting by github.com.
 
 \section{The Shell}
 
-Our shell will support stream redirection and piping
+As mention earlier, this shell will be released on linix, OSX and windows, and will come with most of the features you'd expect from a modern shell. as well as several usability enahancements described in the sections below.
+\begin{enumerate}
+\item Stream redirection '\textless' and '\textgreater'
+\item Piping with '\(\vert\)'
+\item Tab completion
+\item Job control
+\item Comamnd history
+\item Aliases
+\item Directory stack
+\end{enumerate}
 
-Features:
-Windows, Linux, OSX platforms
-Pipes and redirects | < >
-Support proportional spaced fonts for the CLI
-Highlight text, cut, copy, paste
-Mouse interaction
-Syntax highlighting, (gre, grep)
-support aliases (user defined command shortcuts)
-resizable window
-Associate *.sh files with our shell
-Optional Features:
+\subsection*{Modularised Code}
 
+The diagram below shows the modules we plan to implement in the final piece of software, and how they interact with each other.
+
+As you can see input is captured from the users keyboard/mouse, which goes straight to the ``main'' module, (where GUI commands may be called), it then goes through the script parser where, symbols are seperated and recognised, like pipe, and redirection symbols, but more generally our scripting language. to the ``process management'' module, which executes programs, are sends the ``stdout'' stream to the ``main'' module, or it will retain that information and pipe programs togethor. The ``GUI code'' module draws it all onto the screen. 
+
+%process manmager goes to script interpreter then from intepreter to main
 \begin{center}\includegraphics[width=16cm]{shellflow.png}
 
-Fig 3: The flow of information through the shell's modules\end{center}
+The flow of information through the shell's modules\end{center}
 
-Different operating systems by convention define a new line within a file differently
-We will allow the user to choose how to handle cross platform files
-Fix:	
+%\subsection{Cross OS file support}
+%Different operating systems by convention define a new line within a file differently
+%We will allow the user to choose how to handle cross platform files
 
-edit as current OS, save as current OS (Forced when parsing a script)
-Compatibility: 	
-edit as current OS, save as original.
-Do nothing: 	 edit as original save as original.
-Custom: 	
-Fix; but you can specify the replacement terminator {‘\textbackslash r’, ‘\textbackslash n’, ‘\textbackslash r \textbackslash n’, ‘\textbackslash n \textbackslash r’}
-
-Script syntax and semantics definition
-like python, but with braces? i.e. fuck the strict use of whitespace.
-like Bash, but more strict, like C? i.e. fuck the vague million+ ways to do things
-
-
-
-
-
-
+%\begin{tabular}{l | l}
+%Fix & edit as current OS, save as current OS (Forced when parsing a script) \\
+%Compatibility & edit as current OS, save as original. \\
+%Do nothing & edit as original save as original. \\
+%Custom & Fix; but you can specify the replacement terminator \\
+%{‘\textbackslash r’, ‘\textbackslash n’, ‘\textbackslash r \textbackslash n’, ‘\textbackslash n \textbackslash r’}
+%\end{tabular}
 
 \subsection*{Usability Features}
 The shell will allow for intuitive mouse interactions, these interactions will be very similar to the actions in a standard GUI OS environment (i.e. double click for open).
@@ -166,7 +178,7 @@ We will allow users to set temporary (and permanent) directory boomarks with a q
 \\*executin ``\#work'' will set a boomark in the current directory called "work", and successive execution of the command ``\#work'' will change the users directory back to the first directory in which it was called.
 \\\\*i.e. quick navigation between commonly accessed directories when working on a project.
 
-\subsection*{More Advanced Features}
+\subsection*{Tab Completion}
 
 The various forms of ``Tab completion''
 tab completion will index: (--decide on an order of precedence--)
@@ -198,18 +210,23 @@ We will use end statements and colons to delimit program blocks.
 
 \subsubsection*{Keywords}
 \begin{tabular}{| l | l | l | l | } \hline
-and & break & class & else \\ \hline
-end & fail & false & for \\ \hline
-function & global & if & in \\ \hline
-not & or & print & return \\ \hline
-true & try & unicorn & while \\ \hline
+  and & fail & if & return \\ \hline
+  break & false & in & true \\ \hline
+  class & for & not & try \\ \hline
+  else & function & or & unicorn \\ \hline
+  end & global &  print & while \\ \hline
+%and & break & class & else \\ \hline
+%end & fail & false & for \\ \hline
+%function & global & if & in \\ \hline
+%not & or & print & return \\ \hline
+%true & try & unicorn & while \\ \hline
 \end{tabular}
 
 \subsubsection*{Arithmetic operators}
 \begin{tabular}{| l | l | } \hline
 + & Addition \\ \hline
 - & Subtraction \\ \hline
-a & Multiplication \\ \hline
+* & Multiplication \\ \hline
 \textbackslash & Division \\ \hline
 \% & Modulus \\ \hline
 \textasciicircum  & Exponent \\ \hline

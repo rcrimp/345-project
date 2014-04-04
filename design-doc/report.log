@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2014.2.20)  4 APR 2014 22:10
+This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2014.2.20)  4 APR 2014 23:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -133,18 +133,18 @@ File: lstlang1.sty 2013/08/26 1.5b listings language file
 ) (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -209,11 +209,11 @@ e
 ))
 \c@lstlisting=\count111
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 19.
+(Font)              <12> on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 19.
+(Font)              <8> on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 19.
+(Font)              <6> on input line 25.
 
 [1
 
@@ -222,84 +222,57 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
  [2]
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
-
-<shellflow.png, id=13, 775.89874pt x 250.9375pt>
-File: shellflow.png Graphic file (type png)
- <use shellflow.png>
-Package pdftex.def Info: shellflow.png used on input line 103.
-(pdftex.def)             Requested size: 455.24408pt x 147.23625pt.
-
-Overfull \hbox (22.97409pt too wide) in paragraph at lines 103--104
- [] 
- []
-
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ˜ in font cmr10!
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 122.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 122.
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ˜ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ˜ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ˜ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
- [3 <./shellflow.png>]
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 137.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 79.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 108.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 137.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 108.
 
-<context.png, id=20, 280.76895pt x 195.49036pt>
+<shellflow.png, id=13, 775.89874pt x 250.9375pt>
+File: shellflow.png Graphic file (type png)
+ <use shellflow.png>
+Package pdftex.def Info: shellflow.png used on input line 124.
+(pdftex.def)             Requested size: 455.24408pt x 147.23625pt.
+
+Overfull \hbox (22.97409pt too wide) in paragraph at lines 124--125
+ [] 
+ []
+
+[3 <./shellflow.png>] <context.png, id=21, 280.76895pt x 195.49036pt>
 File: context.png Graphic file (type png)
- <use context.png>
-Package pdftex.def Info: context.png used on input line 142.
-(pdftex.def)             Requested size: 341.43306pt x 237.74318pt.
 
-<history.png, id=21, 280.76895pt x 195.49036pt>
+<use context.png>
+Package pdftex.def Info: context.png used on input line 148.
+(pdftex.def)             Requested size: 341.43306pt x 237.74318pt.
+ <history.png, id=22, 280.76895pt x 195.49036pt>
 File: history.png Graphic file (type png)
- <use history.png>
-Package pdftex.def Info: history.png used on input line 162.
+
+<use history.png>
+Package pdftex.def Info: history.png used on input line 168.
 (pdftex.def)             Requested size: 341.43306pt x 237.74318pt.
  [4 <./context.png>] [5 <./history.png>]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 206.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 230.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 230.
  [6] [7] (./report.aux) ) 
 Here is how much of TeX's memory you used:
  3011 strings out of 495034
  43160 string characters out of 6181677
- 144663 words of memory out of 5000000
+ 144655 words of memory out of 5000000
  6202 multiletter control sequences out of 15000+600000
  8811 words of font info for 31 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,7n,40p,555b,1110s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,7n,40p,556b,1110s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
@@ -307,7 +280,7 @@ m/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on report.pdf (7 pages, 251804 bytes).
+Output written on report.pdf (7 pages, 249854 bytes).
 PDF statistics:
  61 PDF objects out of 1000 (max. 8388607)
  40 compressed objects within 1 object stream
