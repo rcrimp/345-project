@@ -196,33 +196,36 @@ The standard bash style keyboard shortcuts to access your history will also exis
 more advanced user. (up, down, "!!", ``!str" etc...)
 
 \subsection*{Directory Bookmarks}
-We will allow users to set temporary (and permanent) directory bookmarks with a quick command.
+We will allow users to set directory bookmarks with a quick command.
 
-Executing ``\#work'' will set a bookmark in the current directory called "work", and successive execution of the command ``\#work'' will change the users directory back to the first directory in which it was called.\\[0.5cm]
-i.e. quick navigation between commonly accessed directories when working on a project.
+Executing ``set \#work'' will set a bookmark in the current directory called "work", then executing ``\#work'' will change the users directory back to directory in which it was set.\\*
+So quick navigation between commonly accessed directories when working on a project.\\[0.5cm]
+We will also implement a directory stack, for the more technically savvy user.\\*
+``\#back'' and ``\#forward'' will be reserved for intuitive interaction with  directory stack, which will match the ``back'' and ``forward'' buttons on the toolbar.
+
 
 \pagebreak
 \subsection*{Tab Completion}
 
-Pressing the tab key will attempt to complete the current symbol written in the prompt, i.e tabbing on ``rmdir Docu'' will try and complete the ``Docu'' symbol, for example: ``Documents'' if such a directory exists in.
+Pressing the tab key will attempt to complete the current unfinished symbol written in the prompt, i.e tabbing on ``rmdir Docu'' will try and complete the ``Docu'' symbol.\\
+For example: ``Documents'', if such a directory exists.
+
+The completions for a symbol will be dependent on the current content of the symbol and what the shell is expecting, e.g. if the shell expects the current symbol to be a file, then the shell will only search for files.
 
 \subsubsection*{Tab-tab}
-If there are multiple possible completions for the current symbol we just write all completions of the console, letting the user view their choices.
+If there are multiple possible completions for the current symbol we write all of these completions to the console, letting the user view their choices.
 
-After writing all completions for the current symbol successive tabbing  won't redundantly list them out again (like BASH), instead we will cycle through the possible completions inline in the prompt.  
+After writing all completions for the current symbol, successive tabbing  won't redundantly list them out again (like BASH), instead we will cycle through the possible completions inline in the prompt.  
 
-\subsubsection*{Wild card *}
-Our ``tab-completer'' will treat a '*' in the prompt as a ``wild card'', i.e * can match any string even the empty string. so ``*.c'' will give ``source.c'' and ``main.c'' or even ``.c'' as possible completions
+\subsubsection*{Wild card}
+Our shell will treat a '*' in the prompt as a ``wild card'', i.e * will lazily match any string, even the empty string. \\
+so ``*.c'' would match ``source.c'', ``main.c'' and even ``.c''
 
-\subsubsection*{Where from?}
-The completions for a symbol will be dependent on the current content of the symbol, and what symbol the prompt is expecting, e.g. if the shell expects a filename as current symbol, then the ``tab-completer'' will only search for files.
+\subsubsection*{Parent directories}
 
-tab completion will search/index the following
-Command history
-Contents of \$PATH
-Directories in the working directory
-Files in the working directory
-Parent directories of the wd, (no longer will you ``cd ../../../../'')
+The parent directories of the working directory will be included when completing a directory name, so navigating back up a file structure is easier.
+
+No longer will you need to ``cd ../../../../''
 
 \subsection*{If we have time}
 More rigorous pattern recognition, using wildcards can be very powerful, but more fine grained filtering would be nice - maybe.\\[0.5cm]
