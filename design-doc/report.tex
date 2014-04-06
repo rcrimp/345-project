@@ -66,15 +66,15 @@ We want a shell that has all the features of popular shells like the Bourne Agai
 
 \section*{Project Overview}
 
-The Unicorn Shell (working title) will be a modern, POSIX style shell which will be released on linux, OSX and Windows under the FreeBSD License. The project will written almost entirely in C++ and al the source code will be released in it's entirety.
+The Unicorn Shell (working title) will be a modern, POSIX style shell which will be released on linux, OSX and Windows under the FreeBSD License. The project will written almost entirely in C++ and all the source code will be released in it's entirety.
 
 The Unicorn Shell will be targeted at those of beginner level, people who are not particularly skilled at using a shell, and possibly even those who have never used one before.
 
-The shell will be developed to be intuitive. Basic shell operations will be natural interactions, that most computer users are familiar with, anyone will be able to pickup unicorn very quickly, even those from different OS backgrounds.
+The shell will be developed to be intuitive. Basic shell operations will be natural interactions, that most computer users are familiar with, anyone will be able to pick up unicorn very quickly, even those from different OS backgrounds.
 
 Despite the target audience of our Shell, it will still provide the full feature set that advanced users would expect.
 
-Such features will include tab-completion, inline command prediction and detection, stream redirection, job control,  command history and aliases. And almost everything will be able to be customised.
+Such features will include tab-completion, inline command prediction and detection, stream redirection, job control,  command history and aliases. Almost everything will be able to be customised.
 
 It will also look pretty with proportional width font, no more ugly mono-spaced garbage, only beautifully kerned Helvetica. 
 
@@ -90,12 +90,11 @@ Shaun recently graduated from UCOL in Palmerston North with a Bachelor’s degre
 has has experience with
 C\#, C++, scripting and web design using PHP and JavaScript, and working with MS-SQL and MySQL database. One of the major things he learned while studying was how to
 %strutter ??
-strutter a team project and how to be as successful leader and team member.
+structure a team project and how to be as successful leader and team member.
 
 \subsection*{Chris McMillan (Toolsmith):}
 Chris has studied at the University of Otago since 2010, but only became interest in computers after high school. He completed a chemistry degree and then decided that his passion lay in computers and began study towards a computer science major as well. He will finish his BSc double major at the end of 2014. His main strengths are music and audiosoftware. Chris can confidently write in both Java and Python, but building a shell in C++ will be a challenge for him that he looks forward to and hopes to learn a lot from.
 
-%GURU?
 \subsection*{Thomas Hall (Language Guru and Tester):}
 Thomas is a recent graduate with BSc in Physics. He is currently studying a DipGrad in computer science to be finished in early 2015. He has experience programming in C\# from experimenting with Unity, and Matlab as part of his physics education. He also has a experience with Java and Python.
 
@@ -162,7 +161,7 @@ The diagram below shows the modules we plan to implement, but more importantly h
 \subsection*{Usability Features}
 The shell will allow for intuitive mouse interactions, these interactions will be very similar to the actions in a standard GUI OS environment (i.e. double click for open).
 
-However, most of our actions wont actually perform the action outright, instead it will paste the command that would perform the requested action into the current prompt, i.e. clicking "delete file" in a *nix environment will paste the command "rm \textless file-name\textgreater" into the prompt, the user will then have to press "return" to execute the command.
+However, most of our actions won't actually perform the action outright, instead it will paste the command that would perform the requested action into the current prompt, i.e. clicking "delete file" in a *nix environment will paste the command "rm \textless file-name\textgreater" into the prompt, the user will then have to press "return" to execute the command.
 
 The purpose of this is to help the user if they do not know the specific text command, and then to teach that particular command to them.
 
@@ -333,13 +332,13 @@ We will use end statements and colons to delimit program blocks.
   \subsubsection*{foo function in unicorn}
   \begin{lstlisting}
     function foo(x):
-    if x == 0:
-    bar()
-    baz()
-    else:
-    qux(x)
-    foo(x - 1)
-    end
+       if x == 0:
+          bar()
+          baz()
+       else:
+          qux(x)
+          foo(x - 1)
+       end
     end
   \end{lstlisting}
 \end{multicols}
