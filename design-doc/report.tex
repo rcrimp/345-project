@@ -19,72 +19,71 @@
 
 \begin{document}
 
-%\\*Project Proposal
-%\\*Prepared for: Andrew Trotman, Lecturer
-%\\*Prepared by: The Famous Five
-%\\*4 April 2014
-%\\*Proposal Name: Five Make a Unicorn Shell
-
-%\title{Project Proposal}
-%\author{Richie, Chris, Tom, Shaun, Reuben}
-%\date{\today}
-
-
 \begin{titlepage}
 
   \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
-  \center
-  \textsc{\LARGE Project Proposal}\\[0.5cm] 
-  \textsc{\large COSC 345 Assignment 1}\\[0.5cm] 
-  %\textsc{\large COSC345 Assignment 1}\\[0.5cm]
+  \begin{center}
+    \textsc{\LARGE Project Proposal}\\[0.5cm] 
+    \textsc{\large COSC 345 Assignment 1}\\[0.5cm] 
+    %\textsc{\large COSC345 Assignment 1}\\[0.5cm]
 
-  \HRule \\[0.6cm]
-         { \huge \bfseries Unicorn Shell}\\[0.4cm]
-         \HRule \\[1.5cm]
-         
-         \Large \emph{Prepared by:}\\
-         \begin{multicols}{3}
-           Reuben \textsc{Crimp}\\
-           Thomas \textsc{Hall}\\
-           Richie \textsc{McKee}\\           
-         \end{multicols}
-         \begin{multicols}{2}
-           Chris \textsc{McMillan}\\
-           Shaun \textsc{Wratten}\\           
-         \end{multicols}
-         
-         \null\vfill{\large \today}\\[3cm]
+    \HRule \\[0.6cm]
+           { \huge \bfseries Five make a Shell}\\[0.4cm]
+           \HRule \\[1.5cm]
+           
+           \Large \emph{Prepared by:}\\
+           \begin{multicols}{3}
+             Reuben \textsc{Crimp}\\
+             Thomas \textsc{Hall}\\
+             Richie \textsc{McKee}\\           
+           \end{multicols}
+           \begin{multicols}{2}
+             Chris \textsc{McMillan}\\
+             Shaun \textsc{Wratten}\\           
+           \end{multicols}
+
+  \end{center}
+  \null\vfill{\small %\today}\\[3cm]
+    \hline
+    \begin{center}
+        \section*{Project Overview}
+    \end{center}
+    The shell will be a modern, POSIX style shell which will be released on linux, OSX and Windows under the FreeBSD License. The project will written almost entirely in C++ and all the source code will be released in it's entirety.
+
+    The Shell will be targeted at those of beginner level, people who are not particularly skilled at using a shell, and possibly even those who have never used one before.
+
+    The shell will be developed to be intuitive. Basic shell operations will be natural interactions, that most computer users are familiar with, anyone will be able to pick up our shell very quickly, even those from different OS backgrounds.
+
+    Despite the target audience of our Shell, it will still provide the full feature set that advanced users would expect.
+
+    Such features will include tab-completion, inline command prediction and detection, stream redirection, job control,  command history and aliases. Almost everything will be able to be customised.
+
+    It will also look pretty with proportional width font, no more ugly mono-spaced garbage, only beautifully kerned Helvetica.}
 \end{titlepage}
 
+
+
+
 \section*{Introduction}
-Thank you for choosing to read our project proposal
+There are an excessive number of shells available for use in the world and the idea of coming along with something new, and better is extremely ambitious. When set with the task of designing and creating a new shell we spent a great deal of time looking at the most popular shells today to see what is was that made them popular, and if we could fathom any way in which we could make them better. We had a number of ideas that sprang to mind and a great deal more that became more apparent to us as we researched shells in greater detail and found things that we felt a shell would benefit from having.
 
-We are extremely excited to show you our proposal. When set with the task of designing and creating a new shell we had a number of ideas that sprang to mind and a great deal more that became more apparent to us as we researched shells in greater detail and found things that we felt a shell would benefit from having.
+We want a shell that has all the features of popular shells like the Bourne Again Shell. However we will attempt to add features that make it far more usable, especially for people less familiar with shells, but also people who like shortcuts. These features will include better mouse interaction support more intuitive directory navigation and file operations. 
 
-%\section*{Project Description}
-We want a shell that has all the features of popular shells like the Bourne Again Shell. However we will attempt to add features that make it far more usable and also include additional features that make our shell standout, encouraging people to adopt our obviously superior piece of software.
+In this proposal we shall present to you the main features of our shell including the tools and hardware that we will be required to work with such as IDEs, compilers and the physical machines that we will use.
 
-\section*{Project Overview}
+%Xcode, C++ libraries and Cocoa graphic for OSX, vim, g++, C++ libraries and X11 for GNU/Linux, while with Windows we shall be working with Visual Studio 2013, C++ libraries and WIN32.
 
-The Unicorn Shell (working title) will be a modern, POSIX style shell which will be released on linux, OSX and Windows under the FreeBSD License. The project will written almost entirely in C++ and all the source code will be released in it's entirety.
+We have also anticipated a number of risks to our project such as the potential loss of a member, loss of code, or becoming overwhelmed by other demands or lack of experience. We will discuss how we hope to mitigate the chances of any of these occurring and how we shall cope if they do. 
 
-The Unicorn Shell will be targeted at those of beginner level, people who are not particularly skilled at using a shell, and possibly even those who have never used one before.
-
-The shell will be developed to be intuitive. Basic shell operations will be natural interactions, that most computer users are familiar with, anyone will be able to pick up unicorn very quickly, even those from different OS backgrounds.
-
-Despite the target audience of our Shell, it will still provide the full feature set that advanced users would expect.
-
-Such features will include tab-completion, inline command prediction and detection, stream redirection, job control,  command history and aliases. Almost everything will be able to be customised.
-
-It will also look pretty with proportional width font, no more ugly mono-spaced garbage, only beautifully kerned Helvetica. 
+Finally we have developed a project schedule, which has been laid out in a Gant chart, that will help to keep us on track, and help to alleviate some of the aforementioned risks. This schedule will hopefully give us something we can stick to but also be flexible. 
 
 \pagebreak
 \section*{The Team}
 
-\subsection*{Reuben Crimp (Surgeon):}
+\subsection*{Reuben Crimp - \small Surgeon}
 Reuben began programming in high school, making what interested him: games and websites. He graduated highschool in 2011 doing well in mathematics. He enrolled at Otago University in mid 2012, with computer science as a major, mathematics for a minor. He has very little industry experience but a strong passion for the subject matter.
 
-\subsection*{Shaun Wratten (Co-pilot):}
+\subsection*{Shaun Wratten - \small Co-pilot, C++ Expert}
 Shaun recently graduated from UCOL in Palmerston North with a Bachelor’s degree in Information and Communications Technology,
 %in which he learnt a decent portion of his skill set. This includes programming in
 has has experience with
@@ -92,15 +91,15 @@ C\#, C++, scripting and web design using PHP and JavaScript, and working with MS
 %strutter ??
 structure a team project and how to be as successful leader and team member.
 
-\subsection*{Chris McMillan (Toolsmith):}
+\subsection*{Chris McMillan - \small Toolsmith, Objective-C Expert}
 Chris has studied at the University of Otago since 2010, but only became interest in computers after high school. He completed a chemistry degree and then decided that his passion lay in computers and began study towards a computer science major as well. He will finish his BSc double major at the end of 2014. His main strengths are music and audiosoftware. Chris can confidently write in both Java and Python, but building a shell in C++ will be a challenge for him that he looks forward to and hopes to learn a lot from.
 
-\subsection*{Thomas Hall (Language Guru and Tester):}
+\subsection*{Thomas Hall - \small Tester, Language Architect}
 Thomas is a recent graduate with BSc in Physics. He is currently studying a DipGrad in computer science to be finished in early 2015. He has experience programming in C\# from experimenting with Unity, and Matlab as part of his physics education. He also has a experience with Java and Python.
 
 %Document guy
-\subsection*{Richie McKee (Editor and Program Clerk):}
-Richie completed his LLB/BA at the end of 2012 at Otago University. He always had a strong desire to learn computer science but is only now taking steps towards doing so. He began his DipGrad at the start of 2014 and hopes to be completed by the end of the year. As such his current level of experience is limited and his experience with programming is limited to what he learned during Summer School and what he is currently covering throughout the semester. To him the project is a daunting but exciting prospect that he hopes to learn from.
+\subsection*{Richie McKee - \small Administrator, Editor and Program Clerk}
+,Richie completed his LLB/BA at the end of 2012 at Otago University. He always had a strong desire to learn computer science but is only now taking steps towards doing so. He began his DipGrad at the start of 2014 and hopes to be completed by the end of the year. As such his current level of experience is limited and his experience with programming is limited to what he learned during Summer School and what he is currently covering throughout the semester. To him the project is a daunting but exciting prospect that he hopes to learn from.
 
 \pagebreak
 \section*{Tools and Hardware}
@@ -110,31 +109,31 @@ Our windows dev enviroment will be our own private windows 7 64-bit machine.
 \subsection*{Development tools}
 \begin{multicols}{3}
   \subsubsection*{Windows}
-    Visual Studio 2013 \\
-    C++ libraries \\
-    WIN32 \columnbreak
+  Visual Studio 2013 \\
+  C++ libraries \\
+  WIN32 \columnbreak
   \subsubsection*{OSX}
-    Xcode \\
-    C++ libraries \\
-    Cocoa graphics \columnbreak
+  Xcode \\
+  C++ libraries \\
+  Cocoa graphics \columnbreak
   \subsubsection*{GNU/Linux}
-    vim, g++ \\
-    C++ libraries \\
-    X11
+  vim, g++ \\
+  C++ libraries \\
+  X11
 \end{multicols}
 \subsection*{Revision Control}
 We will use git for our distributed revision control, with project hosting by github.com.
 \section*{The Shell}
 This shell will be released on linux, OSX and windows, and will come with several usability enhancements which are described in follwing sections, as well as most of the features you'd expect from a modern shell.
 \begin{multicols}{4}
-\noindent
-Stream redirection \\
-Piping \\
-Tab completion \\
-Command history \\
-Job control \\
-Aliases \\
-Directory stack
+  \noindent
+  Stream redirection \\
+  Piping \\
+  Tab completion \\
+  Command history \\
+  Job control \\
+  Aliases \\
+  Directory stack
 \end{multicols}
 \subsection*{Modularised Code}
 
@@ -200,28 +199,28 @@ e.g hovering over ``new folder'' will show ``New Folder : \$ mkdir \textless dir
 Fig 2 has the following buttons from left to right.
 
 \begin{multicols}{4}\noindent
-Previous Dir \\ %``dir-stack alias'' \\
-Next Dir \\ %``dir-stack alias'' \\
-Up one Dir \\*%``cd ..'' \\
-\columnbreak
+  Previous Dir \\ %``dir-stack alias'' \\
+  Next Dir \\ %``dir-stack alias'' \\
+  Up one Dir \\*%``cd ..'' \\
+  \columnbreak
 
-\noindent
-New File \\ %``touch \textless file-name\textgreater'' \\
-New Folder \\*%``mkdir \textless dir-name\textgreater'' \\
-\columnbreak
+  \noindent
+  New File \\ %``touch \textless file-name\textgreater'' \\
+  New Folder \\*%``mkdir \textless dir-name\textgreater'' \\
+  \columnbreak
 
-\noindent
-Cut Text \\ %``Ctrl-'' \\
-Copy Text \\ %``Ctrl-'' \\
-Paste Text \\*%``Ctrl-'' \\
-\columnbreak
+  \noindent
+  Cut Text \\ %``Ctrl-'' \\
+  Copy Text \\ %``Ctrl-'' \\
+  Paste Text \\*%``Ctrl-'' \\
+  \columnbreak
 
-\noindent
-Search for a file \\ %``word'' \\
-Search in a file \\*%``word'' \\
+  \noindent
+  Search for a file \\ %``word'' \\
+  Search in a file \\*%``word'' \\
 \end{multicols}
 
-\subsection*{Interactive viewing of the command history}
+\subsection*{Interactive command history}
 Clicking the small arrow to the left of the prompt, will open a drop down menu (upwards), showing the last commands executed in ascending order, allowing for easy access
 
 The standard bash style keyboard shortcuts to access your history will also exist for the
@@ -282,8 +281,8 @@ We will use end statements and colons to delimit program blocks.
     and & fail & if & return \\ \hline
     break & false & in & true \\ \hline
     class & for & not & try \\ \hline
-    else & function & or & unicorn \\ \hline
-    end & global &  print & while \\ \hline
+    else & function & or & while \\ \hline
+    end & global &  print &  \\ \hline
   \end{tabular}
 
   \subsubsection*{Arithmetic operators}
@@ -329,7 +328,7 @@ We will use end statements and colons to delimit program blocks.
       }
     }
   \end{lstlisting}
-  \subsubsection*{foo function in unicorn}
+  \subsubsection*{foo function in our language}
   \begin{lstlisting}
     function foo(x):
        if x == 0:
@@ -350,12 +349,38 @@ We wanted to implement a proactive approach to dealing with risks as opposed to 
 
 Our objective is to be able to avoid risk whenever possible, and to solve problems before they manifested themselves. This preparation would hopefully mean that we could respond to problems that did occur in a controlled and effective manner. We understand that risks evolve throughout the course of the project and so we will be constantly monitoring identified risks throughout the course of the year via a risk map to ensure that we are still keeping them at bay. 
 
-\section*{Project Schedule}
+\subsection*{Loss of a Team Member}
+The consequences of losing a team member are fairly straightforward. We would lose 20\% of our workforce if this occurs. However the effect of losing a person would be vastly different depending on who was lost. For example, losing Reuben or Shaun would would be worse because they are responsisble for most of the programming. But if such drastic events occured we would survive, Tom is also an adept programming so is Chris.
 
-Dependencies between activities - allocation of people to tasks, time until milestones
+As it stands there are no foreseen reasons as to why our team would lose a member. Everyone plans on completing the course. However it is possible Richie might leaves for a more secure job. But his role  could be split between Thomas and Chris in the event of his departure. 
+
+\subsection*{Concurrent Working}
+We will have multiple people modiying the same files which could cause conflicts. Thankfully this risk is all but eliminated since we are using Git which detects file conflicts.
+
+\subsection*{Failure to Complete Milestones}
+Due to the the requirements that the shell work across a number of platforms, our group is required to have a fairly extensive knowledge on a number of technologies. The time spent learning how to use these tools is time we are not coding and testing.
+
+We have assigned certain tasks to certain team members, and it is there responsibility to ensure their task is completed.\\
+
+\begin{tabular}{l l}
+  Reuben & Linux GUI,  process stream redirection/piping \\
+  Shaun & Windows GUI, command prediction/completion \\
+  Chris & GUI Architect, Mac OSX GUI \\
+  Thomas & Script Lexical Analyser/Parser \\
+  Richie & Planning, Documenting and testing \\
+\end{tabular}\\*
+
+If anything is behind schedule, then it is up to the person responsible to request help on IRC, or mention it on one of our bi-weekly meeetings.\\
+
+Workload from other classes may get in the way, it is a real possibility that team members may be so busy that they are unable to carry out their duties. Which is why our regular meeting and IRC are so important.
+\pagebreak
+\section*{Project Schedule}
+The key is to stay on schedule, and if problems arise, we communicate.
 
 Monitoring the project and ourselves is an important way for us to anticipate future problems and gives us a chance to avoid them.
 
-Sticking to the Gantt Chart, Pert Chart - make sure on schedule reporting - GIT hub - so every time we make a build we push it.
+\begin{center}
+  \includegraphics[width=18cm]{gantt.png}\\
+\end{center}
 
 \end{document}
