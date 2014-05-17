@@ -1,10 +1,18 @@
-#
-# Makefile for 345-project
-# 
+# Paths for libraries and includes
+COPTS =  -Wall -std=c++0x
 
-all:
-	g++ -W -Wall -ansi -pedantic -O2 *.c -o shell
-debug:
-	g++ -W -Wall -ansi -pedantic -O2 -g *.c -o shell
+#source files
+CFILES = process.cpp main.cpp
+
+#compiler
+CC = g++
+
+TARGET = shell
+
+default: go
+
+go:
+	$(CC) $(COPTS) $(CFILES) -o $(TARGET)
+
 clean:
-	rm -f shell
+	rm -f $(TARGET) core

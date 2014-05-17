@@ -1,140 +1,36 @@
-/***********************************************
-* Zeus CMD - GLUT Tutorial 02 : Keyboard Input *
-* By Grant James (ZEUS)                        *
-* http://www.zeuscmd.com                       *
-***********************************************/
+#include <stdio.h>
+#include <stdlib.h>
+
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 #include <iostream>
-#include <GL/glut.h>
+
+#include <sys/stat.h>
+#include <fcntl.h>
+
+#include <string.h>
+#include <errno.h>
+
+#include "process.h"
 
 using namespace std;
 
-bool ignoreRepeats = false;
+#define READ_END 0
+#define WRITE_END 1
 
-bool init()
-{
-	return true;
-}
+int main(void){
 
-void display()
-{
+   char *temp[] = {"ls", NULL};  
+   process_info *p1 = new process_info {0, "2/bin/ls", 3, temp};
 
-}
+   char *temp2[] = {"grep", "cpp",  NULL};
+   process_info *p2 = new process_info{0, "/bin/grep", 2, temp2};
+   
+   execute_process(p1);
+   
+   execute_process_pipe(p1, p2);
 
-void keyboard(unsigned char key, int x, int y)
-{
-	switch(key)
-	{
-	// Backspace
-	case 8 :
-		cout << "Pressed Backspace" << endl;
-		break;
+   return 0;
 
-	// Enter
-	case 13 :
-		cout << "Pressed Enter" << endl;
-		break;
-
-	// Escape
-	case 27 :
-		cout << "Pressed Escape" << endl;
-		break;
-
-	// Delete
-	case 127 :
-		cout << "Pressed Delete" << endl;
-		break;
-
-	default : 
-		cout << "Pressed key : " << (char)key 
-			<< " at position : ("
-			<< x << "," << y << ")" << endl;
-		break;
-	}
-
-	int mod = glutGetModifiers();
-
-	switch(mod)
-	{
-	case GLUT_ACTIVE_CTRL :
-		cout << "Ctrl Held" << endl; break;
-	case GLUT_ACTIVE_SHIFT :
-		cout << "Shift Held" << endl; break;
-	case GLUT_ACTIVE_ALT :
-		cout << "Alt Held" << endl; break;
-	}
-}
-
-void keyboardup(unsigned char key, int x, int y)
-{
-	if (key == 'a')
-		cout << "a key lifted" << endl;
-}
-
-void special(int key, int x, int y)
-{
-	switch(key)
-	{
-	case GLUT_KEY_F2 :
-		cout << "Pressed F2" << endl;
-		break;
-
-	case GLUT_KEY_UP :
-		cout << "Pressed Up" << endl;
-		break;
-
-	case GLUT_KEY_INSERT :
-	{
-		int modifiers = glutGetModifiers();
-
-		if (
-			modifiers == 
-			(GLUT_ACTIVE_CTRL | GLUT_ACTIVE_ALT))
-		{
-			cout << "Pressed Insert " <<
-				"with only Ctrl and Alt" << endl;
-		}
-		else if (modifiers & GLUT_ACTIVE_CTRL &&
-			modifiers & GLUT_ACTIVE_ALT)
-		{
-			cout << "Pressed Insert " <<
-			"with Ctrl and Alt" << endl;
-		}
-
-		break;
-	}
-
-	case GLUT_KEY_F1 :
-		ignoreRepeats = !ignoreRepeats;
-		glutIgnoreKeyRepeat(ignoreRepeats);
-		
-		if (ignoreRepeats)
-			cout << "Repeates disabled" << endl;
-		else
-			cout << "Repeats enabled" << endl;
-
-		break;
-
-	}
-}
-
-int main(int argc, char *argv[])
-{
-	glutInit(&argc, argv);
-
-	glutInitWindowPosition(200, 200);
-	glutInitWindowSize(200, 200);
-
-	glutCreateWindow("02 - Keyboard Input");
-
-	glutDisplayFunc(display);
-	glutKeyboardFunc(keyboard);
-	glutKeyboardUpFunc(keyboardup);
-	glutSpecialFunc(special);
-
-	if (!init())
-		return 1;
-
-	glutMainLoop();
-
-	return 0;
 }
