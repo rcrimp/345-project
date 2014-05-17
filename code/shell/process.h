@@ -1,11 +1,14 @@
 #ifndef PROCESS_H_
 #define PROCESS_H_  
 
+typedef enum {WAITING, DONE, FAILED} Status;
+
 struct process_info{
-   int status; /* 0 = successfull */
    char *path; // "/bin/ls"
    int argc; // 3
    char** argv; // "ls" "-l" NULL
+   Status status; /* 0 = waiting  */
+   char output[4096];
    /* file descriptor for redirection */
 };
 

@@ -16,21 +16,29 @@
 
 using namespace std;
 
-#define READ_END 0
-#define WRITE_END 1
-
 int main(void){
-
-   char *temp[] = {"ls", NULL};  
-   process_info *p1 = new process_info {0, "2/bin/ls", 3, temp};
-
+   char *temp1[] = {"ls", "-l",  NULL};
    char *temp2[] = {"grep", "cpp",  NULL};
-   process_info *p2 = new process_info{0, "/bin/grep", 2, temp2};
+   
+   //process_info *p1 = new process_info{"/bin/ls", 3, temp1, WAITING};
+   process_info *p1 = (process_info*)malloc(sizeof(process_info));
+   p1->path = "/bin/ls";
+   p1->argc = 3;
+   p1->argv = temp1;
+   p1->status = WAITING;
+
+   process_info *p2 = new process_info{"/bin/grep", 2, temp2, WAITING};
+
+
+
+
    
    execute_process(p1);
+   //cout << p1->output;
    
    execute_process_pipe(p1, p2);
 
+   free(p1);
+   //free(p2);
    return 0;
-
 }
