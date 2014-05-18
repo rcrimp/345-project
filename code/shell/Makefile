@@ -9,7 +9,7 @@ CC = g++
 
 TARGET = shell
 
-default: go
+default: clean go
 
 go:
 	$(CC) $(COPTS) $(CFILES) -o $(TARGET)

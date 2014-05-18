@@ -1,0 +1,68 @@
+Our shell will not come with a quick-start guide, the user will not need to be taught how to perform basic shell operations.
+
+Our shell will be aimed towards people who are not particularly skilled at using a shell, aiming for high usability, and a secondary goal is to teach users more advanced shell usage.
+
+It will provide several graphical enhancements that will alow the user to perform basic operations, without prior education in shell usage.
+
+Operations be very similar to those found on the graphical interface on common OS's, i.e. double click to open a file, right click for a context menu etc...
+
+This is so that operations will feel natural, and will not require the user to be taught how to use our shell.
+
+The human mind is able to recognise complex visual patterns quickly, so there's no need to limit our shell to highlighted text to differ between files, we will 
+
+
+highligh text in command history, right click context menu, cut copy paste
+mouse interaction in the prompt, i.e click anywhere, edit any part of the current command
+
+
+
+THINGS
+our shell with come with a new 'ls' command, designed for specifically for beginners (the standard unix style 'ls' will be able to exist alongside or as a replacement for our provided one)
+
+The key points of our new 'ls' command
+Our shell will provide several ways to interact with files using the mouse, these interactions will be very similar to the actions performed when interacting with files in a standard GUI OS enviroment (i.e. double click for open)
+but most of our actions wont actually perform the action, it will paste the command that would perform that action into the current prompt, i.e. clicking "open file" on a GNOME enviroment will paste the command "gnome-open <filename>" into the prompt, the user will then have to press "return" to execute the command.
+The purpose of this is to both help the user, and teach the user. Hopefully th user will learn to type the commands to increase their workflow etc.. word words here jafhdsakfdsf.... 
+
+1: filetypes are preceeded by a small icon, indicating the filetype, akin to GUI shells.
+
+2: Intuitive directory navigation.
+Single clicking on some directory "x/" will paste the command "cd x/" into the prompt.
+Double clicking on some directory "x/" will execute the command "cd x/"
+Right clicking on some directory "x/" will open a context menu (see fig.1), which will list basic directory commands
+e.g "open (cd)" will execute the command "cd x/"
+"move to .. (mv), will paste the command "mv x/ " into the prompt, allowing the user to type in a new name for the file.
+etc...
+
+3: Intuitive file interaction
+Single clicking on some file will paste the filename into the current prompt, i.e if I were to type "emacs" into my prompt, and then click "textfile.txt", this will result in having "emacs result.txt" left in my prompt.
+Double clicking on some file will open the file with the OS default application. e.g if I were in a GNU/linux enviroment, and pdf files were associated with evince, double clicking on "document.pdf" will open the pdf file in evince. 
+Right clicking a file will open a context menu (see fig.1), which will list basic file operations
+e.g "GUI open (open)" will perform the same operation as double clicking the file.
+"Rename To .. (mv)" will paste the string "mv <filename> ", then allowing the user to choose a new name"
+"Move to Trash" will perform the command "mv <filename> ./Trash/" or something similar"
+etc...
+
+4: Interactive viewing of the command history
+clicking the small arrow to the left of the prompt, will open a drop down menu (upwards), showing the last commands executed in ascending/descending? order (i.e last on bottom).
+
+The stanard bash style keyboard shortuts to access your history will also exist for the more advanced user.
+(up, down, "!!", !3" etc...)
+
+We need more ideas
+
+
+
+
+Hastags
+That's right, wer're hip, we're with it
+We will allow users to set temporay (and permanent) directory flags with a quick command.
+usage:
+executing "#work" will set a flag in the current directory called "work", and succsive execution of the command "#work" will change the users directory back to the first driectory in which it was called. allowing for quick navigation between directories when working on a project. These check-points are not stored be default when the shell is closed, but there will be an option to save these "hastags" so that they persist over sperate sessions.
+
+
+
+
+
+
+

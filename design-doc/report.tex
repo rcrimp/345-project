@@ -42,27 +42,26 @@
              Shaun \textsc{Wratten}\\           
            \end{multicols}
 
+  
+  \null\vfill{\small April 4, 2014}\\[3cm]
+    %\hline
+    %\begin{center}
   \end{center}
-  \null\vfill{\small %\today}\\[3cm]
-    \hline
-    \begin{center}
-        \section*{Project Overview}
-    \end{center}
-    The shell will be a modern, POSIX style shell which will be released on linux, OSX and Windows under the FreeBSD License. The project will written almost entirely in C++ and all the source code will be released in it's entirety.
-
-    The Shell will be targeted at those of beginner level, people who are not particularly skilled at using a shell, and possibly even those who have never used one before.
-
-    The shell will be developed to be intuitive. Basic shell operations will be natural interactions, that most computer users are familiar with, anyone will be able to pick up our shell very quickly, even those from different OS backgrounds.
-
-    Despite the target audience of our Shell, it will still provide the full feature set that advanced users would expect.
-
-    Such features will include tab-completion, inline command prediction and detection, stream redirection, job control,  command history and aliases. Almost everything will be able to be customised.
-
-    It will also look pretty with proportional width font, no more ugly mono-spaced garbage, only beautifully kerned Helvetica.}
 \end{titlepage}
+\section*{Project Overview}
+%\end{center}
+The shell will be a modern, POSIX style shell which will be released on linux, OSX and Windows under the FreeBSD License. The project will written almost entirely in C++ and all the source code will be released in it's entirety.
 
+The Shell will be targeted at those of beginner level, people who are not particularly skilled at using a shell, and possibly even those who have never used one before.
 
+The shell will be developed to be intuitive. Basic shell operations will be natural interactions, that most computer users are familiar with, anyone will be able to pick up our shell very quickly, even those from different OS backgrounds.
 
+Despite the target audience of our Shell, it will still provide the full feature set that advanced users would expect.
+
+Such features will include tab-completion, inline command prediction and detection, stream redirection, job control,  command history and aliases. Almost everything will be able to be customised.
+
+It will also look pretty with proportional width font, no more ugly mono-spaced garbage, only beautifully kerned Helvetica.
+\null\vfill
 
 \section*{Introduction}
 There are an excessive number of shells available for use in the world and the idea of coming along with something new, and better is extremely ambitious. When set with the task of designing and creating a new shell we spent a great deal of time looking at the most popular shells today to see what is was that made them popular, and if we could fathom any way in which we could make them better. We had a number of ideas that sprang to mind and a great deal more that became more apparent to us as we researched shells in greater detail and found things that we felt a shell would benefit from having.
@@ -99,7 +98,7 @@ Thomas is a recent graduate with BSc in Physics. He is currently studying a DipG
 
 %Document guy
 \subsection*{Richie McKee - \small Administrator, Editor and Program Clerk}
-,Richie completed his LLB/BA at the end of 2012 at Otago University. He always had a strong desire to learn computer science but is only now taking steps towards doing so. He began his DipGrad at the start of 2014 and hopes to be completed by the end of the year. As such his current level of experience is limited and his experience with programming is limited to what he learned during Summer School and what he is currently covering throughout the semester. To him the project is a daunting but exciting prospect that he hopes to learn from.
+Richie completed his LLB/BA at the end of 2012 at Otago University. He always had a strong desire to learn computer science but is only now taking steps towards doing so. He began his DipGrad at the start of 2014 and hopes to be completed by the end of the year. As such his current level of experience is limited and his experience with programming is limited to what he learned during Summer School and what he is currently covering throughout the semester. To him the project is a daunting but exciting prospect that he hopes to learn from.
 
 \pagebreak
 \section*{Tools and Hardware}
@@ -270,9 +269,11 @@ Active command prediction, which attempt to complete the current command from th
 
 \pagebreak
 \section*{Script Syntax}
+Since no one in our group has ever made an interpreter before, we have gone for a very simple language.
 
-%paragraph here?
-We will use end statements and colons to delimit program blocks.
+We will take advantage of whitespace, to make things easier to tokenize, but we will not use whitespace indentation to indicate code blocks.
+
+The end of a statement (line) will be indicated by either a newline character or a semi-colon.
 
 \begin{multicols}{2}
 
@@ -316,27 +317,29 @@ We will use end statements and colons to delimit program blocks.
 
 \subsection*{Code Examples}
 \begin{multicols}{2}
-  \subsubsection*{foo function in C}
+  \subsubsection*{Loops}
   \begin{lstlisting}
-    void foo(int x) {
-      if (x == 0) {
-        bar();
-        baz();
-      } else {
-        quz(x);
-        foo(x - 1);
-      }
-    }
+    for ( j = 0;  j < 5; j ++ ) :
+       echo i
+    end
+    
+    i = 0
+    while ( i < 5 ) :
+       echo i
+       i++
+    end
+
   \end{lstlisting}
-  \subsubsection*{foo function in our language}
+  \columnbreak
+  \subsubsection*{if function}
   \begin{lstlisting}
-    function foo(x):
-       if x == 0:
+    function foo ( x ) :
+       if ( x == 0 ) :
           bar()
           baz()
        else:
-          qux(x)
-          foo(x - 1)
+          qux( x )
+          foo( x - 1 )
        end
     end
   \end{lstlisting}
@@ -375,12 +378,20 @@ If anything is behind schedule, then it is up to the person responsible to reque
 Workload from other classes may get in the way, it is a real possibility that team members may be so busy that they are unable to carry out their duties. Which is why our regular meeting and IRC are so important.
 \pagebreak
 \section*{Project Schedule}
-The key is to stay on schedule, and if problems arise, we communicate.
-
 Monitoring the project and ourselves is an important way for us to anticipate future problems and gives us a chance to avoid them.
 
+The key to completing this project is to stay on schedule, and if problems arise, we communicate so we can get back on schedule.
+
+\subsection*{Full Project}
+Here's the full plan in a Gantt chart, from now until release
 \begin{center}
-  \includegraphics[width=18cm]{gantt.png}\\
+  \includegraphics[width=16cm]{full.png}\\
+\end{center}
+
+\subsection*{Alpha}
+And here's the first segment expanded, from now until when the alpha release.
+\begin{center}
+  \includegraphics[width=16cm]{alpha.png}\\
 \end{center}
 
 \end{document}

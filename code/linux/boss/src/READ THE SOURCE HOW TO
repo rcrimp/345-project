@@ -1,0 +1,16 @@
+!---Part of BOH shell. May or may not still be valid.---!
+!---If you are having trouble with the source check ---!
+!---out BOH shell. It is a little simpler.---!
+
+If you want to understand the code of the shell
+read the source in the order of this list,
+it's the order of what I've implemented
+
+shinclude
+usrdat 
+prompt
+parsertypes
+parser
+launcher
+history
+association

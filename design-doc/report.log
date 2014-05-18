@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2014.2.20)  6 APR 2014 18:22
+This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2014.4.7)  7 APR 2014 00:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **report.tex
 (./report.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 2 languages loaded.
+Babel <3.9h> and hyphenation patterns for 59 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
@@ -209,12 +209,6 @@ e
 ))
 \c@lstlisting=\count111
 
-! Misplaced \noalign.
-\hline ->\noalign 
-                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.47     \hline
-               
-? 
 [1
 
 {/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}] [1]
@@ -225,40 +219,40 @@ Missing character: There is no ™ in font cmr12!
 [2] <shellflow.png, id=19, 665.48625pt x 262.9825pt>
 File: shellflow.png Graphic file (type png)
  <use shellflow.png>
-Package pdftex.def Info: shellflow.png used on input line 143.
+Package pdftex.def Info: shellflow.png used on input line 142.
 (pdftex.def)             Requested size: 455.24408pt x 179.90114pt.
 
 [3 <./shellflow.png>]
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 163.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 162.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 163.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 162.
 
 <context.png, id=25, 767.86874pt x 522.95375pt>
 File: context.png Graphic file (type png)
  <use context.png>
-Package pdftex.def Info: context.png used on input line 168.
+Package pdftex.def Info: context.png used on input line 167.
 (pdftex.def)             Requested size: 369.88582pt x 251.91664pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--175
+Underfull \hbox (badness 10000) in paragraph at lines 171--174
 
  []
 
 <history.png, id=26, 767.86874pt x 522.95375pt>
 File: history.png Graphic file (type png)
  <use history.png>
-Package pdftex.def Info: history.png used on input line 187.
+Package pdftex.def Info: history.png used on input line 186.
 (pdftex.def)             Requested size: 369.88582pt x 251.91664pt.
  [4 <./context.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 196--197
+Underfull \hbox (badness 10000) in paragraph at lines 195--196
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--221
+Underfull \hbox (badness 10000) in paragraph at lines 217--220
 
  []
 
@@ -266,70 +260,76 @@ Underfull \hbox (badness 10000) in paragraph at lines 218--221
 File: autocomplete.png Graphic file (type png)
 
 <use autocomplete.png>
-Package pdftex.def Info: autocomplete.png used on input line 267.
+Package pdftex.def Info: autocomplete.png used on input line 266.
 (pdftex.def)             Requested size: 398.33858pt x 36.97057pt.
  [6 <./autocomplete.png>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 280.
+(Font)              <12> on input line 281.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 280.
+(Font)              <8> on input line 281.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 280.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 293.
+(Font)              <6> on input line 281.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 294.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 293.
- [7]
-Underfull \hbox (badness 10000) in paragraph at lines 363--364
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 294.
+
+Overfull \hbox (6.5146pt too wide) in paragraph at lines 322--323
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 366--367
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--372
+Underfull \hbox (badness 10000) in paragraph at lines 368--375
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--374
+Underfull \hbox (badness 10000) in paragraph at lines 376--377
 
  []
 
-[8] <gantt.png, id=49, 1180.41pt x 608.2725pt>
-File: gantt.png Graphic file (type png)
- <use gantt.png>
-Package pdftex.def Info: gantt.png used on input line 383.
-(pdftex.def)             Requested size: 512.1496pt x 263.91885pt.
+[8] <full.png, id=49, 383.031pt x 82.3878pt>
+File: full.png Graphic file (type png)
+ <use full.png>
+Package pdftex.def Info: full.png used on input line 388.
+(pdftex.def)             Requested size: 455.24408pt x 97.927pt.
 
-Overfull \hbox (49.87961pt too wide) in paragraph at lines 383--383
- [] 
- []
-
-[9 <./gantt.png (PNG copy)>] (./report.aux) ) 
+<alpha.png, id=50, 473.3685pt x 173.80936pt>
+File: alpha.png Graphic file (type png)
+ <use alpha.png>
+Package pdftex.def Info: alpha.png used on input line 394.
+(pdftex.def)             Requested size: 455.24408pt x 167.1627pt.
+ [9 <./full.png> <./alpha.png>] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 3026 strings out of 495034
- 43381 string characters out of 6181677
- 144637 words of memory out of 5000000
- 6213 multiletter control sequences out of 15000+600000
+ 3029 strings out of 493417
+ 43404 string characters out of 6144320
+ 151126 words of memory out of 5000000
+ 6429 multiletter control sequences out of 15000+600000
  10659 words of font info for 37 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 38i,7n,40p,615b,1110s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on report.pdf (10 pages, 272914 bytes).
+ 953 hyphenation exceptions out of 8191
+ 38i,7n,40p,615b,1109s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on report.pdf (10 pages, 263032 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
+ 84 PDF objects out of 1000 (max. 8388607)
  52 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

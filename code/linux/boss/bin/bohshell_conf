@@ -1,0 +1,25 @@
+@start bohsh config
+
+#this is the configuration file of the bohshell
+#the # lines are comments like this
+#the @ lines are tags for the config statements
+#between two @ tags you can write or a comment #
+#or a configuration
+
+@start prompt
+#u  username
+#d  domain
+#i  uid
+#g  gid
+#c  cwd
+
+#default prompt
+{u[i][g]:c}
+@end prompt
+
+@start association
+c |jed
+txt |vi
+@end association
+
+@end bohsh config

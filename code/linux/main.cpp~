@@ -1,0 +1,11 @@
+#include "includes.h"
+
+using namespace std;
+
+int execute_process(struct process_info* p1);
+//int execute_process_piped(struct process_info* p1, struct process_info* p2);
+
+int main(){
+   cout << "words\n";
+   return 0;
+}

@@ -1,0 +1,60 @@
+execve("./shell", ["./shell"], [/* 46 vars */]) = 0
+brk(0)                                  = 0x198e000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fa5905f1000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=124305, ...}) = 0
+mmap(NULL, 124305, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fa5905d2000
+close(3)                                = 0
+open("/lib64/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260\272\205\3637\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=998720, ...}) = 0
+mmap(0x37f3800000, 3175456, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x37f3800000
+mprotect(0x37f38e9000, 2097152, PROT_NONE) = 0
+mmap(0x37f3ae9000, 40960, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe9000) = 0x37f3ae9000
+mmap(0x37f3af3000, 82976, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x37f3af3000
+close(3)                                = 0
+open("/lib64/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220X\200\3527\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1163072, ...}) = 0
+mmap(0x37ea800000, 3170648, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x37ea800000
+mprotect(0x37ea905000, 2097152, PROT_NONE) = 0
+mmap(0x37eab05000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x105000) = 0x37eab05000
+close(3)                                = 0
+open("/lib64/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360*\300\3537\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=91352, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fa5905d1000
+mmap(0x37ebc00000, 2184192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x37ebc00000
+mprotect(0x37ebc15000, 2093056, PROT_NONE) = 0
+mmap(0x37ebe14000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x14000) = 0x37ebe14000
+close(3)                                = 0
+open("/lib64/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0p\36\202\3517\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=2100672, ...}) = 0
+mmap(0x37e9800000, 3924576, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x37e9800000
+mprotect(0x37e99b4000, 2097152, PROT_NONE) = 0
+mmap(0x37e9bb4000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b4000) = 0x37e9bb4000
+mmap(0x37e9bba000, 16992, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x37e9bba000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fa5905d0000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fa5905ce000
+arch_prctl(ARCH_SET_FS, 0x7fa5905ce780) = 0
+mprotect(0x37e9bb4000, 16384, PROT_READ) = 0
+mprotect(0x37ebe14000, 4096, PROT_READ) = 0
+mprotect(0x37eab05000, 4096, PROT_READ) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fa5905cd000
+mprotect(0x37f3ae9000, 32768, PROT_READ) = 0
+mprotect(0x601000, 4096, PROT_READ)     = 0
+mprotect(0x37e921f000, 4096, PROT_READ) = 0
+munmap(0x7fa5905d2000, 124305)          = 0
+brk(0)                                  = 0x198e000
+brk(0x19b0000)                          = 0x19b0000
+brk(0)                                  = 0x19b0000
+pipe([3, 4])                            = 0
+clone(child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fa5905cea50) = 13923
+clone(child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fa5905cea50) = 13924
+wait4(0, NULL, 0, NULL)                 = 13923
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=13923, si_status=0, si_utime=0, si_stime=0} ---
+exit_group(0)                           = ?
++++ exited with 0 +++
