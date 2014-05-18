@@ -2,7 +2,7 @@
 COPTS =  -Wall -std=c++0x
 
 #source files
-CFILES = process.cpp main.cpp
+CFILES = parser.cpp process.cpp main.cpp 
 
 #compiler
 CC = g++

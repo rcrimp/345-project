@@ -12,58 +12,58 @@
 #include <string.h>
 #include <errno.h>
 
+#include <string.h>
+#include <string>
+
 #include "process.h"
+#include "parser.h"
 
 using namespace std;
 
 int main(void){
-   char out[4096];
-   // char out2[4096];
+   // char temp[4096];
 
-   char *temp1[] = {"ls", "-l",  NULL};
-   char *temp2[] = {"grep", "cpp",  NULL};
-   char *temp3[] = {"sort", "-r", NULL};
+   // char *arg1[] = {"ls", "-l",  NULL};
+   // char *arg2[] = {"grep", "cpp",  NULL};
+   // char *arg3[] = {"sort", "-r", NULL};
    
-   process_info *p1 = (process_info*)malloc(sizeof(process_info));
-   p1->path = "/bin/ls";
-   p1->argc = 3;
-   p1->argv = temp1;
-   p1->status = WAITING;
+   // process_info *p1 = (process_info*)malloc(sizeof(process_info));
+   // p1->path = "ls";
+   // p1->argc = 3;
+   // p1->argv = arg1;
+   // p1->status = WAITING;
 
-   process_info *p2 = (process_info*)malloc(sizeof(process_info));
-   p2->path = "/bin/grep";
-   p2->argc = 2;
-   p2->argv = temp2;
-   p2->status = WAITING;
+   // process_info *p2 = (process_info*)malloc(sizeof(process_info));
+   // p2->path = "grep";
+   // p2->argc = 2;
+   // p2->argv = arg2;
+   // p2->status = WAITING;
 
-   process_info *p3 = (process_info*)malloc(sizeof(process_info));
-   p3->path = "/usr/bin/sort";
-   p3->argc = 2;
-   p3->argv = temp3;
-   p3->status = WAITING;
+   // process_info *p3 = (process_info*)malloc(sizeof(process_info));
+   // p3->path = "sort";
+   // p3->argc = 2;
+   // p3->argv = arg3;
+   // p3->status = WAITING;
 
-   //execute_process(p1);
-   // read(p1->fd, out, sizeof(out));
-   // cout << out << endl;
-   
-   execute_process_pipe(p1, p2);
-   //read(p2->fd, out, sizeof(out));
-   //cout << out << endl;
-    
-   execute_process_pipe(p2, p3);
-   // read(p1->fd, out, sizeof(out));
-   // cout << out << endl;
-   // read(p2->fd, out, sizeof(out));
-   // cout << out << endl;
-   read(p3->fd, out, sizeof(out));
-   cout << out << endl;
+   while (true){
+      std::string input;
+      // resetting arrays
+      for (unsigned int i = 0; i < 128; i++){
+         commandArray[i] = "";
+         for (unsigned int j = 0; j < 256; j++){
+            argumentArray[i][j] = "";
+         }
+         pipeArray[i] = "";
+      }
+      commandCount = 0;
+      
+      getline(cin, input);
+      mainParse(input);
+      printData();
+   }
 
-   cout << p1->fd << endl;
-   cout << p2->fd << endl;
-   cout << p3->fd << endl;
-
-   free(p1);
-   free(p2);
-   free(p3);
+   // free(p1);
+   // free(p2);
+   // free(p3);
    return 0;
 }
