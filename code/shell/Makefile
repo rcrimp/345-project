@@ -1,5 +1,5 @@
 # Paths for libraries and includes
-COPTS =  -Wall -std=c++0x
+COPTS =  -Wall -O0 -std=c++0x
 
 #source files
 CFILES = parser.cpp process.cpp main.cpp 

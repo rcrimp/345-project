@@ -1,97 +1,80 @@
 #include <iostream>
+#include <sstream>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <string>
-
-#include "parser.h"
- 
-using namespace std;
- 
-std::string commandArray[128]; //list of commands
-std::string argumentArray[128][256]; //list of arguments for each command
-std::string pipeArray[128]; //list of pipe symbols that fit betweent the commands
-int commandCount = 0;
-int argumentCount = 0;
- 
-//splits between pipe symbols
-void mainParse(std::string input){
-   
-   bool pipe = false;
-   for (unsigned int i = 0; i < input.length(); i++){
+#include "process.h"
      
-      if (input[i] == '|'){
-         pipe = true;
-         pipeArray[commandCount] = input[i];
-         parseCommand(input.substr(0, i));
-         mainParse(input.substr(i +1));
-      }
-      if (input[i] == '<' || input[i] == '>'){
-         pipe = true;
-         if (input[i] == input[i +1]){
-            pipeArray[commandCount] = input[i] + input[i +1];
-            parseCommand(input.substr(0, i +1));
-            mainParse(input.substr(i +2));
-         } else {
-            pipeArray[commandCount] = input[i];
-            parseCommand(input.substr(0, i));
-            mainParse(input.substr(i +1));
-         }
-      }
-      if (i == input.length() -1 && pipe == false){
-         parseCommand(input);
-      }
-   }
-}
-//separates arguments from command and saves command as string
-void parseCommand(std::string command){
+using namespace std;
+     
+void printData();
+void mainParse(string input);
+
+#define ARGMAX 128
+     
+//std::string commandArray[128]; //list of commands
+//std::string argumentArray[128][256]; //list of arguments for each command
+std::string pipeArray[128]; //list of pipe symbols that fit betweent the commands
+unsigned int commandCount = 0;
+     
+void mainParse(std::string input, process_info **p){
+   unsigned int argumentCount = 0;
+   bool commandStored = false;
    
-   unsigned int count = 0;
-   while (command[0] == ' ' && command.length() > 1){
-      command = command.substr(1);
-   } //remove whitespace
-   if (command == " ") return;
-   while (count < command.length() && command[count] != ' '){
-      if (command[count] == '\\') count++;
-      count++;
-   }
-   commandArray[commandCount] = command.substr(0, count);
-   commandCount++;
-   parseArguments(command.substr(count));
-}
-//splits arguments up and saves as array
-void parseArguments(std::string arguments){
- 
-   argumentCount = 0;
-   while (arguments[arguments.length() -1] == ' '){
-      arguments = arguments.substr(0, arguments.length() -2);
-   } //remove whitespace
-   while (arguments.length() > 0){  
-      unsigned int count = 0;
-      while (arguments[0] == ' ' && arguments.length() > 1){
-         arguments = arguments.substr(1);
-      } //remove whitespace
-      while (count < arguments.length() && arguments[count] != ' '){
-         if (arguments[count] == '\\') count++;
-         count++;
-      }
-      argumentArray[commandCount][argumentCount] = arguments.substr(0, count);
-      arguments = arguments.substr(count);
-      argumentCount++;
-   }
-}
- 
-//prints the command and piping data
-void printData(){
-   std::string output = "";
-   for (unsigned int i = 0; i < 128; i++){
-      if (commandArray[i] != ""){
-         cout << commandArray[i] + " ";
-      }
-      for (unsigned int j = 0; j < 256; j++){
-         if (argumentArray[i][j] != ""){
-            cout << argumentArray[i][j] + " ";
-         }
+   std::istringstream iss(input);
+   std::string word;
+         
+   while (iss >> word){
+      if ((word == "|" || word == "<" || word == ">"
+           || word == "<<" || word == ">>") && commandStored == true){
+         pipeArray[commandCount] = word;
+         commandStored = false;
+      } else if (commandStored == false){
+         (p[commandCount]) = (process_info*)malloc(sizeof(process_info));
+         
+         (p[commandCount])->program = (char*)malloc(sizeof(char)*(word.length()+1));
+         strcpy((p[commandCount])->program, (char*)word.c_str());
+            
+         (p[commandCount])->argc = 1;
+         
+         (p[commandCount])->argv = (char**)malloc(sizeof(char*)*ARGMAX);
+         (p[commandCount])->argv[0] = (p[commandCount])->program;
+         (p[commandCount])->argv[1] = NULL;
+
+         (p[commandCount])->status = WAITING;
+         
+         argumentCount = 1; /* need this and argc ?? */
+         commandStored = true;
+         commandCount++;    
+      } else {
+         //cout << "unused arg: " << word << endl; 
+         //argumentArray[commandCount][argumentCount] = word;
+         //(p[commandCount-1])->argv[argumentCount] = (char*)word.c_str();
+         //(p[commandCount-1])->argv[argumentCount+1] = NULL;
+
+         (p[commandCount-1])->argv[argumentCount] = (char*)malloc(sizeof(char)*(word.length()+1));
+         strcpy((p[commandCount-1])->argv[argumentCount], (char*)word.c_str());
+         (p[commandCount-1])->argv[argumentCount+1] = NULL;
+         
+         argumentCount++;
+         (p[commandCount-1])->argc = argumentCount;
       }
    }
+   commandStored = false;
 }
+     
+// void printData(){
+     
+//    std::string output = "";
+//    for (unsigned int i = 0; i < 128; i++){
+//       if (commandArray[i] != ""){
+//          cout << commandArray[i] << endl;
+//       }
+//       for (unsigned int j = 0; j < 256; j++){
+//          if (argumentArray[i][j] != ""){
+//             cout << argumentArray[i][j] + "-arg ";
+//          }
+//       }
+//    }
+// }
+

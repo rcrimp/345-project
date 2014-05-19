@@ -24,12 +24,12 @@ int execute_single_process(struct process_info* p){
       dup2(fd[PIPE_WRITE], STDOUT_FILENO);
       //dup2(fd[2], STDERR_FILENO);
       close(fd[PIPE_READ]);
-      if(execvp(p->path, p->argv) < 0)
-         return fail_process(p,"failed execvp\n", p->path);
+      if(execvp(p->program, p->argv) < 0)
+         return fail_process(p,"failed execvp\n", p->program);
    }else{
       close(fd[PIPE_WRITE]);
       //close(fd[2]);
-      p->fd_out = fd[PIPE_READ];
+      p->pipe_out = fd[PIPE_READ];
       waitpid(cpid, NULL, 0);
       p->status = DONE;
    }
@@ -39,10 +39,11 @@ int execute_single_process(struct process_info* p){
 int execute_piped_process(struct process_info* p1, struct process_info* p2){
    if(p1->status != DONE)
       execute_single_process(p1);
-   return pipe_fd_in(p1->fd_out, p2);
+   *p2->pipe_in = p1->pipe_out;
+   return execute_piped(p2);
 }
 
-int pipe_fd_in(int fd_in, struct process_info* p2){
+int execute_piped(struct process_info* p2){
    int pipe_fd[2];
    pid_t cpid;
 
@@ -53,15 +54,15 @@ int pipe_fd_in(int fd_in, struct process_info* p2){
    
    if(cpid == 0){
       dup2(pipe_fd[PIPE_WRITE], STDOUT_FILENO);
-      dup2(fd_in, STDIN_FILENO);
+      dup2( *(p2->pipe_in) , STDIN_FILENO);
       //dup2(fd[2], STDERR_FILENO);
       close(pipe_fd[PIPE_READ]);
-      if(execvp(p2->path, p2->argv) < 0)
-         return fail_process(p2,"failed execvp\n", p2->path);
+      if(execvp(p2->program, p2->argv) < 0)
+         return fail_process(p2,"failed execvp\n", p2->program);
    }else{
       close(pipe_fd[PIPE_WRITE]);
       //close(fd[2]);
-      p2->fd_out = pipe_fd[PIPE_READ];
+      p2->pipe_out = pipe_fd[PIPE_READ];
       waitpid(cpid, NULL, 0);
       p2->status = DONE;
    }
@@ -91,8 +92,8 @@ int fail_process(struct process_info* p, const char *a, const char *b) {
 //       printf("In child process (pid = %d)\n", getpid());
 //       dup2(pipe_fd[PIPE_WRITE], STDOUT_FILENO);
 //       //close(pipe_fd[PIPE_WRITE]);
-//       if(execvp(p1->path, p1->argv) < 0)
-//          return fail_process(p1,"failed execvp\n", p1->path);
+//       if(execvp(p1->program, p1->argv) < 0)
+//          return fail_process(p1,"failed execvp\n", p1->program);
 //    }else{ /* main thread */
 //       if((cpid = fork()) == -1)
 //          return fail_process(p2,"borked the fork\n", "");
@@ -100,8 +101,8 @@ int fail_process(struct process_info* p, const char *a, const char *b) {
 //          printf("In child process (pid = %d)\n", getpid());
 //          dup2(pipe_fd[PIPE_READ], STDIN_FILENO);
 //          //close(pipe_fd[PIPE_OUT]);
-//          if(execvp(p2->path, p2->argv) < 0)
-//             return fail_process(p2,"failed execvp\n", p2->path);
+//          if(execvp(p2->program, p2->argv) < 0)
+//             return fail_process(p2,"failed execvp\n", p2->program);
 //       } else{ /* main thread */      
 //          //cerr << cpid1;
 //           //cerr << "\n";
