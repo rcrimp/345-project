@@ -1,0 +1,4 @@
+all: #fedora lab enviroment
+	g++ example.cpp -o example -lX11
+osx: 
+	g++ example.cpp -o example -lX11 -I/usr/X11R6/include -I/usr/X11R6/include/X11 -L/usr/X11R6/lib

@@ -1,8 +1,0 @@
-#ifndef PROCESS_H
-#define PROCESS_H
-
-void pipe_read(int f);
-void pipe_writerm(int f);
-
-
-#endif
