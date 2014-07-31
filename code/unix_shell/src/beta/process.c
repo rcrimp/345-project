@@ -1,10 +1,3 @@
-/*
- * Author: Reuben
- *
- * using the "process_info" structs it calls pipe, forks and exec
- * 
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -13,10 +6,6 @@
 #include <errno.h>
 
 #include "process.h"
-
-#include <iostream>
-
-using namespace std;
 
 int execute_single_process(struct process_info* p){
    int fd[2];
@@ -59,7 +48,7 @@ int execute_piped(struct process_info* p){
    if((cpid = fork()) == -1)
       return fail_process(p,"borked the fork\n", "");
    
-   if(cpid == 0){
+   if(cpid == 0){ /* if child */
       dup2(pipe_fd[PIPE_WRITE], STDOUT_FILENO);
       if(p->in == PIPEIN){
          dup2( *(p->pipe_in) , STDIN_FILENO);
@@ -68,7 +57,7 @@ int execute_piped(struct process_info* p){
       close(pipe_fd[PIPE_READ]);
       if(execvp(p->program, p->argv) < 0)
          return fail_process(p,"failed execvp\n", p->program);
-   }else{
+   }else{ /* if parent */
       close(pipe_fd[PIPE_WRITE]);
       //close(fd[2]);
       p->pipe_out = pipe_fd[PIPE_READ];

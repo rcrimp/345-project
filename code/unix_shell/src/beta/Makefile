@@ -1,11 +1,11 @@
 # Paths for libraries and includes
-COPTS =  -Wall -O2 -g
+COPTS =  -W -Wall -O2 -g
 
 #source files
-CFILES = parser.cpp process.cpp main.cpp 
+CFILES = parser.c process.c main.c 
 
 #compiler
-CC = g++
+CC = gcc
 
 TARGET = shell
 

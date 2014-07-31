@@ -1,11 +1,3 @@
-/*
- * Author: Reuben
- *
- * include all the things
- * this is mostly for testing
- * 
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -43,49 +35,6 @@ int main(void){
    //   STDOUT_FILENO 1
    //   STDERR_FILENO 2
    // */
-   
-   // char *arg1[] = {"ls", "-l",  NULL};
-   // process_info *p1 = (process_info*)malloc(sizeof(process_info));
-   // p1->program = "ls";
-   // p1->argc = 2;
-   // p1->argv = arg1;
-   // p1->status = WAITING;
-
-   // char *arg2[] = {"grep", "cpp",  NULL};
-   // process_info *p2 = (process_info*)malloc(sizeof(process_info));
-   // p2->program = "grep";
-   // p2->argc = 2;
-   // p2->argv = arg2;
-   // p2->status = WAITING;
-   // p2->pipe_in = &p1->pipe_out;
-
-   // char *arg3[] = {"sort", "-r", NULL};
-   // process_info *p3 = (process_info*)malloc(sizeof(process_info));
-   // p3->program = "sort";
-   // p3->argc = 2;
-   // p3->argv = arg3;
-   // p3->status = WAITING;
-   // p3->pipe_in = &p2->pipe_out;
-   
-   // /* open file */
-   // FILE *fp = fopen("test.txt", "w");
-   // /* execute process */
-   // execute_single_process(p1);
-   // /* store the outpute in a temp buffer */
-   // read(p1->pipe_out, temp, sizeof(temp));
-   // /* write to the file from the buffer */
-   // fprintf(fp, "%s", temp);
-
-   // execute_single_process(p1);
-   // execute_piped(p2);
-   // execute_piped(p3);
-
-   // read(p2->pipe_out, buff, sizeof(buff));
-   // cout << buff;
-   
-   // //write(fileno(fp), temp, sizeof(temp));
-   // read(p3->pipe_out, temp, sizeof(temp));
-   // cout << temp;
    
    while (true){  
       commandCount = 0;
@@ -128,3 +77,48 @@ int main(void){
    // free(p3);
    return 0;
 }
+
+
+
+// char *arg1[] = {"ls", "-l",  NULL};
+// process_info *p1 = (process_info*)malloc(sizeof(process_info));
+// p1->program = "ls";
+// p1->argc = 2;
+// p1->argv = arg1;
+// p1->status = WAITING;
+
+// char *arg2[] = {"grep", "cpp",  NULL};
+// process_info *p2 = (process_info*)malloc(sizeof(process_info));
+// p2->program = "grep";
+// p2->argc = 2;
+// p2->argv = arg2;
+// p2->status = WAITING;
+// p2->pipe_in = &p1->pipe_out;
+
+// char *arg3[] = {"sort", "-r", NULL};
+// process_info *p3 = (process_info*)malloc(sizeof(process_info));
+// p3->program = "sort";
+// p3->argc = 2;
+// p3->argv = arg3;
+// p3->status = WAITING;
+// p3->pipe_in = &p2->pipe_out;
+   
+// /* open file */
+// FILE *fp = fopen("test.txt", "w");
+// /* execute process */
+// execute_single_process(p1);
+// /* store the outpute in a temp buffer */
+// read(p1->pipe_out, temp, sizeof(temp));
+// /* write to the file from the buffer */
+// fprintf(fp, "%s", temp);
+
+// execute_single_process(p1);
+// execute_piped(p2);
+// execute_piped(p3);
+
+// read(p2->pipe_out, buff, sizeof(buff));
+// cout << buff;
+   
+// //write(fileno(fp), temp, sizeof(temp));
+// read(p3->pipe_out, temp, sizeof(temp));
+// cout << temp;
